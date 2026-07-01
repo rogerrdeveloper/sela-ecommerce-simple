@@ -1,0 +1,389 @@
+.bg-grain {
+    background-color: #f7f6f3;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 0);
+    background-size: 20px 20px;
+}
+
+html {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100%;
+    position: relative;
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.scroll-reveal {
+    visibility: visible;
+}
+
+.font-luxury {
+    letter-spacing: 0.05em;
+}
+
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+@keyframes waPop {
+    from { opacity: 0; transform: scale(0.4); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+#wa-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(37,211,102,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    pointer-events: all !important;
+    cursor: pointer !important;
+}
+
+#wa-float:hover {
+    transform: scale(1.08) translateY(-2px) !important;
+    box-shadow: 0 12px 40px rgba(37,211,102,0.6) !important;
+}
+
+#cart-drawer {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#cart-drawer.open {
+    transform: translateX(0);
+}
+
+#cart-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#cart-items-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+#cart-items-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#cart-items-list::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+#checkout-form input:focus,
+#checkout-form select:focus {
+    border-color: #000;
+}
+
+/* Legacy zoom classes removed — new product images use full object-cover */
+
+
+#product-modal {
+    transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#product-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#product-modal.open #modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#modal-content {
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s ease;
+}
+
+#modal-content div::-webkit-scrollbar {
+    width: 4px;
+}
+#modal-content div::-webkit-scrollbar-track {
+    background: transparent;
+}
+#modal-content div::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.group:hover .product-card-img img {
+    transform: scale(1.03);
+}
+
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100%;
+    position: relative;
+}
+
+/* ============================
+   TABLET / IPAD (768px – 1024px)
+   ============================ */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Header */
+    header .h-20 {
+        height: 4.5rem;
+    }
+
+    /* Hero — stack vertically on tablets, but with more breathing room */
+    #conceito {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+    #conceito .grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+        text-align: center;
+    }
+    #conceito .lg\:col-span-7,
+    #conceito .lg\:col-span-5 {
+        grid-column: span 12 !important;
+    }
+    #conceito .lg\:text-left {
+        text-align: center !important;
+    }
+    #conceito .lg\:justify-start {
+        justify-content: center !important;
+    }
+    #conceito .lg\:mx-0 {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    #hero-product {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    /* Diferenciais — 2 columns on tablet */
+    #diferenciais .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.25rem !important;
+    }
+
+    /* Produtos — 2 columns on tablet */
+    #produtos .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Ritual — single column on tablet */
+    #ritual .grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    #ritual .lg\:col-span-7 {
+        padding-left: 0 !important;
+    }
+    #ritual .max-w-\[360px\] {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Hero title scale */
+    #hero-title {
+        font-size: 2.8rem !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Nav stays visible on tablets */
+    #header-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    #hero-title {
+        font-size: 3.5rem !important;
+        line-height: 1.2 !important;
+    }
+    #hero-product {
+        margin-top: 2rem;
+    }
+    #ritual .grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 768px) {
+    header .h-20 {
+        height: 4rem !important;
+    }
+
+    #bg-blur-1, #bg-blur-2 {
+        display: none !important;
+    }
+
+    #hero-title {
+        font-size: 2rem !important;
+        letter-spacing: 0.06em !important;
+        line-height: 1.2 !important;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    #hero-product {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    #diferenciais .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    #produtos .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+    }
+
+    #ritual .grid {
+        grid-template-columns: 1fr !important;
+    }
+    #ritual .lg\:col-span-7 {
+        padding-left: 0 !important;
+    }
+
+    #depoimentos .grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    details summary {
+        gap: 0.75rem;
+    }
+
+    #cart-drawer {
+        max-width: 100% !important;
+    }
+
+    #modal-content {
+        flex-direction: column !important;
+        max-height: 90vh !important;
+        overflow-y: auto !important;
+    }
+
+    #modal-content > div {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    #modal-content .w-full.md\:w-1\/2 {
+        height: auto !important;
+    }
+
+    #modal-content div:first-child {
+        aspect-ratio: 1 / 1 !important;
+        min-height: 220px;
+    }
+
+    #modal-content div:last-child {
+        padding: 1.5rem 1.25rem !important;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    #hero-title {
+        font-size: 1.7rem !important;
+        letter-spacing: 0.04em !important;
+    }
+
+    .px-6 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+.reviews-carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 0.5rem 0 1.5rem;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.reviews-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: reviewsScroll 26s linear infinite;
+}
+
+.reviews-carousel-wrapper:hover .reviews-track {
+    animation-play-state: paused;
+}
+
+@keyframes reviewsScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.review-card {
+    flex-shrink: 0;
+    width: 340px;
+    border: 1px solid rgba(0,0,0,0.05);
+    background: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .review-card {
+        width: 280px;
+    }
+}
