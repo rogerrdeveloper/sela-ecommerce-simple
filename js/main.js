@@ -32,28 +32,17 @@ document.addEventListener("DOMContentLoaded", function () {
         '-=1.4'
     );
 
-    tl.fromTo('#hero-tag',
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        '-=1.1'
-    );
-
-    tl.fromTo('#hero-title .hero-word',
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1.4, stagger: 0.12, ease: "power4.out" },
-        '-=0.9'
-    );
 
     tl.fromTo('#hero-desc',
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 1 },
-        '-=1.1'
+        { opacity: 0, y: 15 },
+        { opacity: 1, y: 0, duration: 1.2 },
+        '-=1.2'
     );
 
     tl.fromTo('#hero-ctas',
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 1 },
-        '-=1'
+        { opacity: 0, y: 15 },
+        { opacity: 1, y: 0, duration: 1.2 },
+        '-=0.9'
     );
 
     gsap.to('#bg-blur-1', {
