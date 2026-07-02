@@ -114,7 +114,7 @@
     </div>
 
     <header id="main-header"
-        class="sticky top-0 z-50 backdrop-blur-md bg-[#f7f6f3]/80 border-b border-black/5 opacity-0">
+        class="sticky top-0 z-50 backdrop-blur-md bg-[#EDE7DE]/85 border-b border-black/5 opacity-0">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a id="header-logo" href="#"
                 class="font-luxury text-3xl md:text-4xl font-normal tracking-[0.25em] uppercase text-black transition-all">
@@ -147,20 +147,38 @@
         </div>
     </header>
 
-    <section id="conceito"
-        class="relative min-h-[calc(100vh-80px)] flex items-center justify-center pt-12 pb-24 px-6 z-10">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <main id="main-content" class="flex flex-col">
+        <section id="conceito"
+            class="order-1 md:order-1 relative w-full flex items-end md:items-center justify-center z-10 overflow-hidden"
+            style="min-height: clamp(520px, 130vw, 95vh);">
 
-            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <!-- Background image (same image for all viewports) -->
+            <img id="conceito-bg"
+                src="images/conceitual2.jpg"
+                alt=""
+                class="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                style="object-position: center top;"
+                aria-hidden="true">
+
+            <!-- Gradient overlay -->
+            <div class="absolute inset-0 pointer-events-none"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.62) 100%);"
+                aria-hidden="true"></div>
+
+            <!-- Text centered/bottom-aligned over image -->
+            <div class="relative z-10 text-center px-6 max-w-3xl mx-auto space-y-6 pb-12 md:pb-0">
+
                 <span id="hero-tag"
-                    class="inline-block text-xs font-bold tracking-[0.3em] uppercase text-black/40 border-b border-black/10 pb-2 opacity-0">Fragrâncias para Ambientes</span>
+                    class="inline-block text-[10px] font-bold tracking-[0.35em] uppercase text-white/80 border-b border-white/30 pb-2 opacity-0">Fragrâncias
+                    para Ambientes</span>
+
                 <h1 id="hero-title"
-                    class="font-luxury text-4xl sm:text-5xl md:text-6xl lg:text-[3rem] xl:text-[3.2rem] font-light tracking-[0.10em] leading-[1.25] text-black">
+                    class="hidden md:block font-luxury text-4xl sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-[4rem] font-light tracking-[0.12em] leading-[1.15] text-white drop-shadow-lg">
                     <span class="block">
                         <span class="hero-word inline-block opacity-0">O</span>
                         <span class="hero-word inline-block opacity-0">INVISÍVEL</span>
                     </span>
-                    <span class="block md:whitespace-nowrap">
+                    <span class="block">
                         <span class="hero-word inline-block opacity-0">QUE</span>
                         <span class="hero-word inline-block opacity-0">TRANSFORMA</span>
                     </span>
@@ -169,677 +187,742 @@
                         <span class="hero-word inline-block opacity-0">ESPAÇO.</span>
                     </span>
                 </h1>
+
                 <div id="hero-desc"
-                    class="text-black/80 font-luxury text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 font-light leading-relaxed opacity-0 space-y-4">
-                    <p>
-                        Na <strong>SELÁ</strong>, acreditamos que os detalhes são capazes de transformar a forma como um ambiente é vivido. Nossos difusores unem fragrâncias cuidadosamente selecionadas, design minimalista e acabamentos que valorizam a simplicidade.
+                    class="text-white/90 font-luxury text-base md:text-xl max-w-xl mx-auto font-light leading-relaxed opacity-0 space-y-3">
+                    <p class="hidden md:block">
+                        Na <strong class="font-semibold">SELÁ</strong>, acreditamos que os detalhes são capazes de
+                        transformar a forma
+                        como um ambiente é vivido. Nossos difusores unem fragrâncias cuidadosamente selecionadas,
+                        design minimalista e acabamentos que valorizam a simplicidade.
                     </p>
-                    <p class="text-lg md:text-xl opacity-90 italic">
-                        Cada composição foi pensada para perfumar com presença, criando uma atmosfera acolhedora, elegante e memorável.
+                    <p class="text-sm md:text-lg opacity-90 italic">
+                        Cada composição foi pensada para perfumar com presença, criando uma atmosfera acolhedora,
+                        elegante e memorável.
                     </p>
                 </div>
-                <div id="hero-ctas"
-                    class="pt-4 flex flex-col sm:flex-row justify-center lg:justify-start gap-4 opacity-0">
+
+                <div id="hero-ctas" class="pt-2 flex flex-col sm:flex-row justify-center gap-4 opacity-0">
                     <a href="#produtos"
-                        class="bg-black text-white px-8 py-4 font-semibold tracking-wide text-sm uppercase hover:bg-neutral-800 transition-all text-center shadow-sm">
+                        class="bg-white text-black px-8 py-4 font-semibold tracking-wide text-xs uppercase hover:bg-white/90 transition-all text-center shadow-lg">
                         Conhecer Coleção
                     </a>
                     <a href="#faq"
-                        class="border border-black/20 text-black px-8 py-4 font-semibold tracking-wide text-sm uppercase hover:bg-black/5 transition-all text-center">
+                        class="border border-white/60 text-white px-8 py-4 font-semibold tracking-wide text-xs uppercase hover:bg-white/10 transition-all text-center backdrop-blur-sm">
                         Como Funciona?
                     </a>
                 </div>
-            </div>
-
-            <div id="hero-product" class="lg:col-span-5 relative flex justify-center opacity-0">
-                <div
-                    class="relative w-full max-w-[380px] aspect-[3/4] bg-white border border-black/5 p-4 shadow-2xl group transition-all duration-700">
-                    <div class="absolute inset-0 border border-black/[0.02] m-2 pointer-events-none"></div>
-                    <div class="w-full h-full overflow-hidden relative">
-                        <img src="images/sela_home.jpg" alt="SELÁ Difusor de Ambientes"
-                            class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105">
-                        <div
-                            class="absolute bottom-4 left-4 text-[9px] tracking-[0.25em] text-white mix-blend-difference uppercase">
-                            SELÁ / ASSINATURA</div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="diferenciais" class="py-24 bg-[#FAF9F6] border-b border-black/5 relative z-10">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16 scroll-reveal">
-                <span class="text-xs font-bold tracking-[0.3em] uppercase text-black/40">Por que escolher</span>
-                <h2 class="font-title text-3xl font-bold uppercase mt-2">A Essência da SELÁ</h2>
-                <div class="h-[1px] w-12 bg-black mx-auto my-4"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div
-                    class="border border-black/5 p-8 bg-white shadow-sm hover:shadow-md transition-shadow duration-300 scroll-reveal">
-                    <div class="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                        </svg>
-                    </div>
-                    <h3 class="font-title text-sm font-bold uppercase tracking-wider mb-2">Fragrâncias Premium</h3>
-                    <p class="text-black/60 text-xs leading-relaxed font-light">
-                        Formuladas com essências importadas de alta qualidade, com notas aromáticas complexas, marcantes
-                        e duradouras.
-                    </p>
-                </div>
-
-                <div
-                    class="border border-black/5 p-8 bg-white shadow-sm hover:shadow-md transition-shadow duration-300 scroll-reveal">
-                    <div class="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                        </svg>
-                    </div>
-                    <h3 class="font-title text-sm font-bold uppercase tracking-wider mb-2">Design Editorial</h3>
-                    <p class="text-black/60 text-xs leading-relaxed font-light">
-                        Inspirados pela simplicidade, nossos frascos unem formas minimalistas e uma paleta atemporal para compor ambientes com equilíbrio, presença e discrição.
-                    </p>
-                </div>
-
-                <div
-                    class="border border-black/5 p-8 bg-white shadow-sm hover:shadow-md transition-shadow duration-300 scroll-reveal">
-                    <div class="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
-                        </svg>
-                    </div>
-                    <h3 class="font-title text-sm font-bold uppercase tracking-wider mb-2">Fixação Superior</h3>
-                    <p class="text-black/60 text-xs leading-relaxed font-light">
-                        Varetas de algodão de alta capilaridade que propagam a fragrância de forma constante e contínua,
-                        com alta performance de dispersão, sem necessidade de inversão diária.
-                    </p>
-                </div>
-
-                <div
-                    class="border border-black/5 p-8 bg-white shadow-sm hover:shadow-md transition-shadow duration-300 scroll-reveal">
-                    <div class="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="font-title text-sm font-bold uppercase tracking-wider mb-2">Sustentabilidade</h3>
-                    <p class="text-black/60 text-xs leading-relaxed font-light">
-                        Produto eco-friendly, livre de parabenos e crueldade animal. Embalagem 100% reciclável.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="produtos" class="py-24 bg-white border-y border-black/5 relative z-10">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16 scroll-reveal">
-                <h2 class="font-title text-3xl md:text-4xl font-bold tracking-tight uppercase">Nossa Coleção</h2>
-                <div class="h-[1px] w-12 bg-black mx-auto my-4"></div>
-                <p class="text-black/50 text-sm">Quatro identidades exclusivas para moldar a atmosfera do seu espaço. R$
-                    140 cada. Peça diretamente pelo WhatsApp.</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-
-                <div
-                    class="bg-[#fcfbf9] border border-black/5 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-black/20 hover:-translate-y-1 transition-all duration-300 group scroll-reveal">
-                    <div>
-
-                        <div class="relative w-full aspect-square bg-[#fafafa] mb-6 overflow-hidden border border-black/[0.03] group-hover:border-black/10 transition-colors"
-                            data-id="ambar" data-name="Âmbar" data-price="140"
-                            data-desc="Quente e oriental. Uma fusão adocicada de baunilha, sândalo e âmbar que cria uma atmosfera aconchegante, íntima e de puro luxo no ambiente."
-                            data-topo="Amêndoa &amp; Bergamota" data-corpo="Coco &amp; Jasmim"
-                            data-fundo="Âmbar, Baunilha &amp; Sândalo" data-image="images/sela_ambarP4.png"
-                            data-zoom-class="prod-ambar">
-
-                            <!-- Produto (padrão, visível) -->
-                            <div class="absolute inset-0 overflow-hidden transition-opacity duration-500">
-                                <img src="images/sela_ambarP4.png" alt="Difusor Âmbar SELÁ"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
-                            </div>
-
-                            <!-- Caixa (aparece no hover) -->
-                            <div class="absolute inset-0 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <img src="images/sela_ambar.png" alt="Embalagem Âmbar SELÁ"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
-                            </div>
-
-                            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 border border-black/5 text-[9px] font-bold tracking-widest uppercase text-black/60">
-                                250ml
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-baseline mb-2">
-                            <h3 class="font-title text-lg font-bold tracking-wide">Âmbar</h3>
-                            <span
-                                class="text-sm font-bold whitespace-nowrap bg-black text-white px-2.5 py-1 font-mono">R$
-                                140</span>
-                        </div>
-                        <p class="text-black/60 text-xs leading-relaxed mb-4 font-light">Quente e oriental. Uma fusão
-                            adocicada de baunilha, sândalo e âmbar que cria uma atmosfera aconchegante, íntima e
-                            luxuosa.</p>
-
-
-                        <div class="space-y-1.5 mb-6 text-[10px] border-t border-black/5 pt-3">
-                            <div class="flex items-center justify-between text-black/40"><span
-                                    class="font-semibold uppercase tracking-wider">Topo:</span> <span
-                                    class="text-black/80">Amêndoa, Bergamota</span></div>
-                            <div class="flex items-center justify-between text-black/40"><span
-                                    class="font-semibold uppercase tracking-wider">Corpo:</span> <span
-                                    class="text-black/80">Coco, Jasmim</span></div>
-                            <div class="flex items-center justify-between text-black/40"><span
-                                    class="font-semibold uppercase tracking-wider">Fundo:</span> <span
-                                    class="text-black/80 font-medium">Âmbar, Baunilha, Sândalo</span></div>
-                        </div>
-                    </div>
-                    <button data-id="ambar" data-name="Âmbar" data-price="140"
-                        class="add-to-cart w-full py-3 bg-black text-white font-semibold text-xs tracking-widest uppercase hover:bg-neutral-800 transition-all shadow-sm">Adicionar
-                        ao Carrinho</button>
-                </div>
-
-
-                <div
-                    class="bg-[#fcfbf9] border border-black/5 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-black/20 hover:-translate-y-1 transition-all duration-300 group scroll-reveal">
-                    <div>
-
-                        <div class="relative w-full aspect-square bg-[#fafafa] mb-6 overflow-hidden border border-black/[0.03] group-hover:border-black/10 transition-colors"
-                            data-id="cha-branco" data-name="Chá Branco" data-price="140"
-                            data-desc="Fresco e sofisticado. Notas cítricas leves combinadas com a suavidade floral do chá branco. Traz leveza, bem-estar e a sensação de spa de luxo para a casa."
-                            data-topo="Limão Siciliano &amp; Tangerina"
-                            data-corpo="Chá Branco, Jasmin &amp; Lírio do Vale" data-fundo="Musk &amp; Cedro"
-                            data-image="images/sela_chabrancoP2.png" data-zoom-class="prod-cha-branco">
-
-                            <!-- Produto (padrão, visível) -->
-                            <div class="absolute inset-0 overflow-hidden transition-opacity duration-500">
-                                <img src="images/sela_chabrancoP2.png" alt="Difusor Chá Branco SELÁ"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
-                            </div>
-
-                            <!-- Caixa (aparece no hover) -->
-                            <div class="absolute inset-0 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <img src="images/sela_chabranco.png" alt="Embalagem Chá Branco SELÁ"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
-                            </div>
-
-                            <div
-                                class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 border border-black/5 text-[9px] font-bold tracking-widest uppercase text-black/60">
-                                250ml
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-baseline mb-2">
-                            <h3 class="font-title text-lg font-bold tracking-wide">Chá Branco</h3>
-                            <span
-                                class="text-sm font-bold whitespace-nowrap bg-black text-white px-2.5 py-1 font-mono">R$
-                                140</span>
-                        </div>
-                        <p class="text-black/60 text-xs leading-relaxed mb-4 font-light">Fresco e sofisticado. Notas
-                            cítricas leves combinadas com a suavidade floral do chá branco. Traz leveza e a sensação de
-                            spa de luxo.</p>
-
-
-                        <div class="space-y-1.5 mb-6 text-[10px] border-t border-black/5 pt-3">
-                            <div class="flex items-center justify-between text-black/40"><span
-                                    class="font-semibold uppercase tracking-wider">Topo:</span> <span
-                                    class="text-black/80">Limão Siciliano, Tangerina</span></div>
-                            <div class="flex items-center justify-between text-black/40"><span
-                                    class="font-semibold uppercase tracking-wider">Corpo:</span> <span
-                                    class="text-black/80">Chá Branco, Jasmin, Lírio</span></div>
-                            <div class="flex items-center justify-between text-black/40"><span
-                                    class="font-semibold uppercase tracking-wider">Fundo:</span> <span
-                                    class="text-black/80 font-medium">Musk, Cedro</span></div>
-                        </div>
-                    </div>
-                    <button data-id="cha-branco" data-name="Chá Branco" data-price="140"
-                        class="add-to-cart w-full py-3 bg-black text-white font-semibold text-xs tracking-widest uppercase hover:bg-neutral-800 transition-all shadow-sm">Adicionar
-                        ao Carrinho</button>
-                </div>
-
-
-                <div
-                    class="bg-[#fcfbf9] border border-black/5 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-black/20 hover:-translate-y-1 transition-all duration-300 group scroll-reveal">
-                    <div>
-
-                        <div class="relative w-full aspect-square bg-[#fafafa] mb-6 overflow-hidden border border-black/[0.03] group-hover:border-black/10 transition-colors"
-                            data-id="tangerina-cedro" data-name="Tangerina e Cedro" data-price="140"
-                            data-desc="Cítrico e amadeirado. O equilíbrio perfeito entre a energia vibrante da tangerina e a robustez elegante do cedro. Uma fragrância moderna, fresca e marcante, perfeita para inspirar foco e sofisticação."
-                            data-topo="Tangerina, Bergamota &amp; Toranja" data-corpo="Alecrim &amp; Néroli"
-                            data-fundo="Cedro, Patchouli &amp; Âmbar" data-image="images/sela_tangerinaP1.png"
-                            data-zoom-class="prod-tangerina">
-
-                            <!-- Produto (padrão, visível) -->
-                            <div class="absolute inset-0 overflow-hidden transition-opacity duration-500">
-                                <img src="images/sela_tangerinaP1.png" alt="Difusor Tangerina e Cedro SELÁ"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
-                            </div>
-
-                            <!-- Caixa (aparece no hover) -->
-                            <div class="absolute inset-0 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <img src="images/sela_tangerina.png" alt="Embalagem Tangerina e Cedro SELÁ"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
-                            </div>
-
-                            <div
-                                class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 border border-black/5 text-[9px] font-bold tracking-widest uppercase text-black/60">
-                                250ml
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-baseline mb-2">
-                            <h3 class="font-title text-lg font-bold tracking-wide">Tangerina e Cedro</h3>
-                            <span
-                                class="text-sm font-bold whitespace-nowrap bg-black text-white px-2.5 py-1 font-mono">R$
-                                140</span>
-                        </div>
-                        <p class="text-black/60 text-xs leading-relaxed mb-4 font-light">Cítrico e amadeirado. O
-                            equilíbrio perfeito entre a energia vibrante da tangerina e a robustez elegante do cedro.
-                            Moderno e marcante.</p>
-
-
-                        <div class="space-y-1.5 mb-6 text-[10px] border-t border-black/5 pt-3">
-                            <div class="flex items-center justify-between text-black/40"><span
-                                    class="font-semibold uppercase tracking-wider">Topo:</span> <span
-                                    class="text-black/80">Tangerina, Bergamota</span></div>
-                            <div class="flex items-center justify-between text-black/40"><span
-                                    class="font-semibold uppercase tracking-wider">Corpo:</span> <span
-                                    class="text-black/80">Alecrim, Néroli</span></div>
-                            <div class="flex items-center justify-between text-black/40"><span
-                                    class="font-semibold uppercase tracking-wider">Fundo:</span> <span
-                                    class="text-black/80 font-medium">Cedro, Patchouli</span></div>
-                        </div>
-                    </div>
-                    <button data-id="tangerina-cedro" data-name="Tangerina e Cedro" data-price="140"
-                        class="add-to-cart w-full py-3 bg-black text-white font-semibold text-xs tracking-widest uppercase hover:bg-neutral-800 transition-all shadow-sm">Adicionar
-                        ao Carrinho</button>
-                </div>
-
-
-                <div
-                    class="bg-[#fcfbf9] border border-black/5 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-black/20 hover:-translate-y-1 transition-all duration-300 group scroll-reveal">
-                    <div>
-
-                        <div class="relative w-full aspect-square bg-[#fafafa] mb-6 overflow-hidden border border-black/[0.03] group-hover:border-black/10 transition-colors"
-                            data-id="alecrim" data-name="Alecrim" data-price="140"
-                            data-desc="Herbal e revigorante. Aroma herbal active que estimula a mente e refresca os sentidos. Excelente para escritórios, halls de entrada e lavabos para manter o ambiente sempre fresco."
-                            data-topo="Alecrim &amp; Eucalipto" data-corpo="Lavanda &amp; Pinho"
-                            data-fundo="Cânfora &amp; Cedro" data-image="images/sela_alecrimP3.png"
-                            data-zoom-class="prod-alecrim">
-
-                            <!-- Produto (padrão, visível) -->
-                            <div class="absolute inset-0 overflow-hidden transition-opacity duration-500">
-                                <img src="images/sela_alecrimP3.png" alt="Difusor Alecrim SELÁ"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
-                            </div>
-
-                            <!-- Caixa (aparece no hover) -->
-                            <div class="absolute inset-0 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <img src="images/sela_alecrim.png" alt="Embalagem Alecrim SELÁ"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
-                            </div>
-
-                            <div
-                                class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 border border-black/5 text-[9px] font-bold tracking-widest uppercase text-black/60">
-                                250ml
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-baseline mb-2">
-                            <h3 class="font-title text-lg font-bold tracking-wide">Alecrim</h3>
-                            <span
-                                class="text-sm font-bold whitespace-nowrap bg-black text-white px-2.5 py-1 font-mono">R$
-                                140</span>
-                        </div>
-                        <p class="text-black/60 text-xs leading-relaxed mb-4 font-light">Herbal e revigorante. Aroma
-                            herbal ativo que estimula a mente e refresca os sentidos. Excelente para escritórios, halls
-                            e lavabos.</p>
-
-
-                        <div class="space-y-1.5 mb-6 text-[10px] border-t border-black/5 pt-3">
-                            <div class="flex items-center justify-between text-black/40"><span
-                                    class="font-semibold uppercase tracking-wider">Topo:</span> <span
-                                    class="text-black/80">Alecrim, Eucalipto</span></div>
-                            <div class="flex items-center justify-between text-black/40"><span
-                                    class="font-semibold uppercase tracking-wider">Corpo:</span> <span
-                                    class="text-black/80">Lavanda, Pinho</span></div>
-                            <div class="flex items-center justify-between text-black/40"><span
-                                    class="font-semibold uppercase tracking-wider">Fundo:</span> <span
-                                    class="text-black/80 font-medium">Cânfora, Cedro</span></div>
-                        </div>
-                    </div>
-                    <button data-id="alecrim" data-name="Alecrim" data-price="140"
-                        class="add-to-cart w-full py-3 bg-black text-white font-semibold text-xs tracking-widest uppercase hover:bg-neutral-800 transition-all shadow-sm">Adicionar
-                        ao Carrinho</button>
-                </div>
 
             </div>
-        </div>
-    </section>
 
-    <section id="ritual" class="py-24 bg-white border-b border-black/5 relative z-10">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-20 scroll-reveal">
-                <span class="text-xs font-bold tracking-[0.3em] uppercase text-black/40">Guia de Experiência</span>
-                <h2 class="font-title text-3xl font-bold uppercase mt-2">O Ritual Olfativo</h2>
-                <div class="h-[1px] w-12 bg-black mx-auto my-4"></div>
-                <p class="text-black/50 text-sm">Como harmonizar seu espaço e obter a melhor fixação e dispersão
-                    aromática.</p>
-            </div>
+        </section>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-                <div class="lg:col-span-5 scroll-reveal">
+
+        <section id="diferenciais"
+            class="order-3 md:order-2 py-16 md:py-24 bg-[#EAE2D5] border-b border-black/5 relative z-10">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16 scroll-reveal">
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-black/40">Por que escolher</span>
+                    <h2 class="font-title text-3xl font-bold uppercase mt-2">A Essência da SELÁ</h2>
+                    <div class="h-[1px] w-12 bg-black mx-auto my-4"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div
-                        class="relative bg-white border border-black/5 p-4 shadow-xl group overflow-hidden aspect-[4/5] w-full max-w-[360px] mx-auto lg:mx-0">
-                        <img src="images/sela_ritualalfativo.jpg" alt="Ritual Olfativo SELÁ"
-                            class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105">
+                        class="border border-black/5 p-8 bg-[#FAF7F2] shadow-sm hover:shadow-md transition-shadow duration-300 scroll-reveal">
+                        <div class="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-title text-sm font-bold uppercase tracking-wider mb-2">Fragrâncias Premium</h3>
+                        <p class="text-black/60 text-xs leading-relaxed font-light">
+                            Formuladas com essências importadas de alta qualidade, com notas aromáticas complexas,
+                            marcantes
+                            e duradouras.
+                        </p>
+                    </div>
+
+                    <div
+                        class="border border-black/5 p-8 bg-[#FAF7F2] shadow-sm hover:shadow-md transition-shadow duration-300 scroll-reveal">
+                        <div class="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                    d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-title text-sm font-bold uppercase tracking-wider mb-2">Design Editorial</h3>
+                        <p class="text-black/60 text-xs leading-relaxed font-light">
+                            Inspirados pela simplicidade, nossos frascos unem formas minimalistas e uma paleta atemporal
+                            para compor ambientes com equilíbrio, presença e discrição.
+                        </p>
+                    </div>
+
+                    <div
+                        class="border border-black/5 p-8 bg-[#FAF7F2] shadow-sm hover:shadow-md transition-shadow duration-300 scroll-reveal">
+                        <div class="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-title text-sm font-bold uppercase tracking-wider mb-2">Fixação Superior</h3>
+                        <p class="text-black/60 text-xs leading-relaxed font-light">
+                            Varetas de algodão de alta capilaridade que propagam a fragrância de forma constante e
+                            contínua,
+                            com alta performance de dispersão, sem necessidade de inversão diária.
+                        </p>
+                    </div>
+
+                    <div
+                        class="border border-black/5 p-8 bg-[#FAF7F2] shadow-sm hover:shadow-md transition-shadow duration-300 scroll-reveal">
+                        <div class="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-title text-sm font-bold uppercase tracking-wider mb-2">Sustentabilidade</h3>
+                        <p class="text-black/60 text-xs leading-relaxed font-light">
+                            Produto eco-friendly, livre de parabenos e crueldade animal. Embalagem 100% reciclável.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos"
+            class="order-2 md:order-3 pt-10 pb-16 md:py-24 bg-[#F8F3ED] border-y border-black/5 relative z-10">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-8 md:mb-16 scroll-reveal">
+                    <h2 class="font-title text-2xl md:text-4xl font-bold tracking-tight uppercase">Nossa Coleção</h2>
+                    <div class="h-[1px] w-12 bg-black mx-auto my-4"></div>
+                    <p class="text-black/50 text-sm">Quatro identidades exclusivas para moldar a atmosfera do seu
+                        espaço. R$ 140 cada. Peça diretamente pelo WhatsApp.</p>
+                </div>
+
+                <!-- Mobile: centraliza o wrapper com largura fixa para o card preencher 100% -->
+                <div class="relative mx-auto w-[85vw] sm:w-[340px] md:w-full">
+                    <div id="products-carousel"
+                        class="flex overflow-x-auto snap-x snap-mandatory w-full md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pb-8 md:pb-0 scrollbar-none">
+
+
                         <div
-                            class="absolute bottom-6 left-6 text-[9px] tracking-[0.2em] text-black/50 uppercase bg-white/95 backdrop-blur-sm px-3 py-1.5 border border-black/5">
-                            Harmonização & Sofisticação</div>
+                            class="w-full md:w-auto flex-shrink-0 snap-center bg-[#EDE7DE] border border-black/5 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-black/20 hover:-translate-y-1 transition-all duration-300 group">
+                            <div>
+
+                                <div class="relative w-full aspect-square bg-[#fafafa] mb-6 overflow-hidden border border-black/[0.03] group-hover:border-black/10 transition-colors"
+                                    data-id="ambar" data-name="Âmbar" data-price="140"
+                                    data-desc="Quente e oriental. Uma fusão adocicada de baunilha, sândalo e âmbar que cria uma atmosfera aconchegante, íntima e de puro luxo no ambiente."
+                                    data-topo="Amêndoa &amp; Bergamota" data-corpo="Coco &amp; Jasmim"
+                                    data-fundo="Âmbar, Baunilha &amp; Sândalo" data-image="images/sela_ambarP4.png"
+                                    data-zoom-class="prod-ambar">
+
+                                    <!-- Produto (padrão, visível) -->
+                                    <div class="absolute inset-0 overflow-hidden transition-opacity duration-500">
+                                        <img src="images/sela_ambarP4.png" alt="Difusor Âmbar SELÁ"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
+                                    </div>
+
+                                    <!-- Caixa (aparece no hover) -->
+                                    <div
+                                        class="absolute inset-0 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                        <img src="images/sela_ambar.png" alt="Embalagem Âmbar SELÁ"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
+                                    </div>
+
+                                    <div
+                                        class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 border border-black/5 text-[9px] font-bold tracking-widest uppercase text-black/60">
+                                        250ml
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-baseline mb-2">
+                                    <h3 class="font-title text-lg font-bold tracking-wide">Âmbar</h3>
+                                    <span
+                                        class="text-sm font-bold whitespace-nowrap bg-black text-white px-2.5 py-1 font-mono">R$
+                                        140</span>
+                                </div>
+                                <p class="text-black/60 text-xs leading-relaxed mb-4 font-light">Quente e oriental. Uma
+                                    fusão
+                                    adocicada de baunilha, sândalo e âmbar que cria uma atmosfera aconchegante, íntima e
+                                    luxuosa.</p>
+
+
+                                <div class="space-y-1.5 mb-6 text-[10px] border-t border-black/5 pt-3">
+                                    <div class="flex items-center justify-between text-black/40"><span
+                                            class="font-semibold uppercase tracking-wider">Topo:</span> <span
+                                            class="text-black/80">Amêndoa, Bergamota</span></div>
+                                    <div class="flex items-center justify-between text-black/40"><span
+                                            class="font-semibold uppercase tracking-wider">Corpo:</span> <span
+                                            class="text-black/80">Coco, Jasmim</span></div>
+                                    <div class="flex items-center justify-between text-black/40"><span
+                                            class="font-semibold uppercase tracking-wider">Fundo:</span> <span
+                                            class="text-black/80 font-medium">Âmbar, Baunilha, Sândalo</span></div>
+                                </div>
+                            </div>
+                            <button data-id="ambar" data-name="Âmbar" data-price="140"
+                                class="add-to-cart w-full py-3 bg-black text-white font-semibold text-xs tracking-widest uppercase hover:bg-neutral-800 transition-all shadow-sm">Adicionar
+                                ao Carrinho</button>
+                        </div>
+
+
+                        <div
+                            class="w-full md:w-auto flex-shrink-0 snap-center bg-[#EDE7DE] border border-black/5 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-black/20 hover:-translate-y-1 transition-all duration-300 group">
+                            <div>
+
+                                <div class="relative w-full aspect-square bg-[#fafafa] mb-6 overflow-hidden border border-black/[0.03] group-hover:border-black/10 transition-colors"
+                                    data-id="cha-branco" data-name="Chá Branco" data-price="140"
+                                    data-desc="Fresco e sofisticado. Notas cítricas leves combinadas com a suavidade floral do chá branco. Traz leveza, bem-estar e a sensação de spa de luxo para a casa."
+                                    data-topo="Limão Siciliano &amp; Tangerina"
+                                    data-corpo="Chá Branco, Jasmin &amp; Lírio do Vale" data-fundo="Musk &amp; Cedro"
+                                    data-image="images/sela_chabrancoP2.png" data-zoom-class="prod-cha-branco">
+
+                                    <!-- Produto (padrão, visível) -->
+                                    <div class="absolute inset-0 overflow-hidden transition-opacity duration-500">
+                                        <img src="images/sela_chabrancoP2.png" alt="Difusor Chá Branco SELÁ"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
+                                    </div>
+
+                                    <!-- Caixa (aparece no hover) -->
+                                    <div
+                                        class="absolute inset-0 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                        <img src="images/sela_chabranco.png" alt="Embalagem Chá Branco SELÁ"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
+                                    </div>
+
+                                    <div
+                                        class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 border border-black/5 text-[9px] font-bold tracking-widest uppercase text-black/60">
+                                        250ml
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-baseline mb-2">
+                                    <h3 class="font-title text-lg font-bold tracking-wide">Chá Branco</h3>
+                                    <span
+                                        class="text-sm font-bold whitespace-nowrap bg-black text-white px-2.5 py-1 font-mono">R$
+                                        140</span>
+                                </div>
+                                <p class="text-black/60 text-xs leading-relaxed mb-4 font-light">Fresco e sofisticado.
+                                    Notas
+                                    cítricas leves combinadas com a suavidade floral do chá branco. Traz leveza e a
+                                    sensação de
+                                    spa de luxo.</p>
+
+
+                                <div class="space-y-1.5 mb-6 text-[10px] border-t border-black/5 pt-3">
+                                    <div class="flex items-center justify-between text-black/40"><span
+                                            class="font-semibold uppercase tracking-wider">Topo:</span> <span
+                                            class="text-black/80">Limão Siciliano, Tangerina</span></div>
+                                    <div class="flex items-center justify-between text-black/40"><span
+                                            class="font-semibold uppercase tracking-wider">Corpo:</span> <span
+                                            class="text-black/80">Chá Branco, Jasmin, Lírio</span></div>
+                                    <div class="flex items-center justify-between text-black/40"><span
+                                            class="font-semibold uppercase tracking-wider">Fundo:</span> <span
+                                            class="text-black/80 font-medium">Musk, Cedro</span></div>
+                                </div>
+                            </div>
+                            <button data-id="cha-branco" data-name="Chá Branco" data-price="140"
+                                class="add-to-cart w-full py-3 bg-black text-white font-semibold text-xs tracking-widest uppercase hover:bg-neutral-800 transition-all shadow-sm">Adicionar
+                                ao Carrinho</button>
+                        </div>
+
+
+                        <div
+                            class="w-full md:w-auto flex-shrink-0 snap-center bg-[#EDE7DE] border border-black/5 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-black/20 hover:-translate-y-1 transition-all duration-300 group">
+                            <div>
+
+                                <div class="relative w-full aspect-square bg-[#fafafa] mb-6 overflow-hidden border border-black/[0.03] group-hover:border-black/10 transition-colors"
+                                    data-id="tangerina-cedro" data-name="Tangerina e Cedro" data-price="140"
+                                    data-desc="Cítrico e amadeirado. O equilíbrio perfeito entre a energia vibrante da tangerina e a robustez elegante do cedro. Uma fragrância moderna, fresca e marcante, perfeita para inspirar foco e sofisticação."
+                                    data-topo="Tangerina, Bergamota &amp; Toranja" data-corpo="Alecrim &amp; Néroli"
+                                    data-fundo="Cedro, Patchouli &amp; Âmbar" data-image="images/sela_tangerinaP1.png"
+                                    data-zoom-class="prod-tangerina">
+
+                                    <!-- Produto (padrão, visível) -->
+                                    <div class="absolute inset-0 overflow-hidden transition-opacity duration-500">
+                                        <img src="images/sela_tangerinaP1.png" alt="Difusor Tangerina e Cedro SELÁ"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
+                                    </div>
+
+                                    <!-- Caixa (aparece no hover) -->
+                                    <div
+                                        class="absolute inset-0 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                        <img src="images/sela_tangerina.png" alt="Embalagem Tangerina e Cedro SELÁ"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
+                                    </div>
+
+                                    <div
+                                        class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 border border-black/5 text-[9px] font-bold tracking-widest uppercase text-black/60">
+                                        250ml
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-baseline mb-2">
+                                    <h3 class="font-title text-lg font-bold tracking-wide">Tangerina e Cedro</h3>
+                                    <span
+                                        class="text-sm font-bold whitespace-nowrap bg-black text-white px-2.5 py-1 font-mono">R$
+                                        140</span>
+                                </div>
+                                <p class="text-black/60 text-xs leading-relaxed mb-4 font-light">Cítrico e amadeirado. O
+                                    equilíbrio perfeito entre a energia vibrante da tangerina e a robustez elegante do
+                                    cedro.
+                                    Moderno e marcante.</p>
+
+
+                                <div class="space-y-1.5 mb-6 text-[10px] border-t border-black/5 pt-3">
+                                    <div class="flex items-center justify-between text-black/40"><span
+                                            class="font-semibold uppercase tracking-wider">Topo:</span> <span
+                                            class="text-black/80">Tangerina, Bergamota</span></div>
+                                    <div class="flex items-center justify-between text-black/40"><span
+                                            class="font-semibold uppercase tracking-wider">Corpo:</span> <span
+                                            class="text-black/80">Alecrim, Néroli</span></div>
+                                    <div class="flex items-center justify-between text-black/40"><span
+                                            class="font-semibold uppercase tracking-wider">Fundo:</span> <span
+                                            class="text-black/80 font-medium">Cedro, Patchouli</span></div>
+                                </div>
+                            </div>
+                            <button data-id="tangerina-cedro" data-name="Tangerina e Cedro" data-price="140"
+                                class="add-to-cart w-full py-3 bg-black text-white font-semibold text-xs tracking-widest uppercase hover:bg-neutral-800 transition-all shadow-sm">Adicionar
+                                ao Carrinho</button>
+                        </div>
+
+
+                        <div
+                            class="w-full md:w-auto flex-shrink-0 snap-center bg-[#EDE7DE] border border-black/5 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-black/20 hover:-translate-y-1 transition-all duration-300 group">
+                            <div>
+
+                                <div class="relative w-full aspect-square bg-[#fafafa] mb-6 overflow-hidden border border-black/[0.03] group-hover:border-black/10 transition-colors"
+                                    data-id="alecrim" data-name="Alecrim" data-price="140"
+                                    data-desc="Herbal e revigorante. Aroma herbal active que estimula a mente e refresca os sentidos. Excelente para escritórios, halls de entrada e lavabos para manter o ambiente sempre fresco."
+                                    data-topo="Alecrim &amp; Eucalipto" data-corpo="Lavanda &amp; Pinho"
+                                    data-fundo="Cânfora &amp; Cedro" data-image="images/sela_alecrimP3.png"
+                                    data-zoom-class="prod-alecrim">
+
+                                    <!-- Produto (padrão, visível) -->
+                                    <div class="absolute inset-0 overflow-hidden transition-opacity duration-500">
+                                        <img src="images/sela_alecrimP3.png" alt="Difusor Alecrim SELÁ"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
+                                    </div>
+
+                                    <!-- Caixa (aparece no hover) -->
+                                    <div
+                                        class="absolute inset-0 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                        <img src="images/sela_alecrim.png" alt="Embalagem Alecrim SELÁ"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
+                                    </div>
+
+                                    <div
+                                        class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 border border-black/5 text-[9px] font-bold tracking-widest uppercase text-black/60">
+                                        250ml
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-baseline mb-2">
+                                    <h3 class="font-title text-lg font-bold tracking-wide">Alecrim</h3>
+                                    <span
+                                        class="text-sm font-bold whitespace-nowrap bg-black text-white px-2.5 py-1 font-mono">R$
+                                        140</span>
+                                </div>
+                                <p class="text-black/60 text-xs leading-relaxed mb-4 font-light">Herbal e revigorante.
+                                    Aroma
+                                    herbal ativo que estimula a mente e refresca os sentidos. Excelente para
+                                    escritórios, halls
+                                    e lavabos.</p>
+
+
+                                <div class="space-y-1.5 mb-6 text-[10px] border-t border-black/5 pt-3">
+                                    <div class="flex items-center justify-between text-black/40"><span
+                                            class="font-semibold uppercase tracking-wider">Topo:</span> <span
+                                            class="text-black/80">Alecrim, Eucalipto</span></div>
+                                    <div class="flex items-center justify-between text-black/40"><span
+                                            class="font-semibold uppercase tracking-wider">Corpo:</span> <span
+                                            class="text-black/80">Lavanda, Pinho</span></div>
+                                    <div class="flex items-center justify-between text-black/40"><span
+                                            class="font-semibold uppercase tracking-wider">Fundo:</span> <span
+                                            class="text-black/80 font-medium">Cânfora, Cedro</span></div>
+                                </div>
+                            </div>
+                            <button data-id="alecrim" data-name="Alecrim" data-price="140"
+                                class="add-to-cart w-full py-3 bg-black text-white font-semibold text-xs tracking-widest uppercase hover:bg-neutral-800 transition-all shadow-sm">Adicionar
+                                ao Carrinho</button>
+                        </div>
+
                     </div>
+
+                    <!-- Botões de Navegação do Carrossel nas Laterais (Mobile) -->
+                    <button id="prev-prod"
+                        class="absolute left-[-20px] top-[35%] -translate-y-1/2 w-10 h-10 rounded-full border border-black/10 bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg hover:bg-white active:bg-black/5 active:scale-95 transition-all z-20 md:hidden"
+                        aria-label="Produto Anterior">
+                        <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                    <button id="next-prod"
+                        class="absolute right-[-20px] top-[35%] -translate-y-1/2 w-10 h-10 rounded-full border border-black/10 bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg hover:bg-white active:bg-black/5 active:scale-95 transition-all z-20 md:hidden"
+                        aria-label="Próximo Produto">
+                        <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="ritual"
+            class="order-4 md:order-4 py-16 md:py-24 bg-[#E5DDD2] border-b border-black/5 relative z-10">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-20 scroll-reveal">
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-black/40">Guia de Experiência</span>
+                    <h2 class="font-title text-3xl font-bold uppercase mt-2">O Ritual Olfativo</h2>
+                    <div class="h-[1px] w-12 bg-black mx-auto my-4"></div>
+                    <p class="text-black/50 text-sm">Como harmonizar seu espaço e obter a melhor fixação e dispersão
+                        aromática.</p>
                 </div>
 
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-                <div class="lg:col-span-7 space-y-10 pl-0 lg:pl-6">
-                    <div class="flex gap-6 items-start scroll-reveal">
-                        <span class="font-luxury text-5xl font-light text-black/20 leading-none">01.</span>
-                        <div class="space-y-1">
-                            <h3 class="font-title text-sm font-bold uppercase tracking-wider text-black">Escolha a
-                                Posição</h3>
-                            <p class="text-black/60 text-xs leading-relaxed font-light">Coloque seu difusor em
-                                superfícies na altura média dos olhos ou da cintura (aproximadamente 1m a 1.5m de
-                                altura). Isso permite que as correntes de ar do ambiente carreguem a fragrância de forma
-                                natural e uniforme por todo o espaço.</p>
+                    <div class="lg:col-span-5 scroll-reveal">
+                        <div
+                            class="relative bg-[#FAF7F2] border border-black/5 p-4 shadow-xl group overflow-hidden aspect-[4/5] w-full max-w-[360px] mx-auto lg:mx-0">
+                            <img src="images/sela_ritualalfativo.jpg" alt="Ritual Olfativo SELÁ"
+                                class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105">
+                            <div
+                                class="absolute bottom-6 left-6 text-[9px] tracking-[0.2em] text-black/50 uppercase bg-white/95 backdrop-blur-sm px-3 py-1.5 border border-black/5">
+                                Harmonização & Sofisticação</div>
                         </div>
                     </div>
 
-                    <div class="flex gap-6 items-start scroll-reveal">
-                        <span class="font-luxury text-5xl font-light text-black/20 leading-none">02.</span>
-                        <div class="space-y-1">
-                            <h3 class="font-title text-sm font-bold uppercase tracking-wider text-black">A Ativação
-                                Inicial</h3>
-                            <p class="text-black/60 text-xs leading-relaxed font-light">Insira todas as varetas de
-                                algodão
-                                que acompanham o produto. Para uma explosão aromática imediata, inverta as varetas após
-                                30 minutos. As varetas de algodão da SELÁ dispensam a inversão diária, mantendo a
-                                dispersão constante por capilaridade.</p>
+
+                    <div class="lg:col-span-7 space-y-10 pl-0 lg:pl-6">
+                        <div class="flex gap-6 items-start scroll-reveal">
+                            <span class="font-luxury text-5xl font-light text-black/20 leading-none">01.</span>
+                            <div class="space-y-1">
+                                <h3 class="font-title text-sm font-bold uppercase tracking-wider text-black">Escolha a
+                                    Posição</h3>
+                                <p class="text-black/60 text-xs leading-relaxed font-light">Coloque seu difusor em
+                                    superfícies na altura média dos olhos ou da cintura (aproximadamente 1m a 1.5m de
+                                    altura). Isso permite que as correntes de ar do ambiente carreguem a fragrância de
+                                    forma
+                                    natural e uniforme por todo o espaço.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-6 items-start scroll-reveal">
+                            <span class="font-luxury text-5xl font-light text-black/20 leading-none">02.</span>
+                            <div class="space-y-1">
+                                <h3 class="font-title text-sm font-bold uppercase tracking-wider text-black">A Ativação
+                                    Inicial</h3>
+                                <p class="text-black/60 text-xs leading-relaxed font-light">Insira todas as varetas de
+                                    algodão
+                                    que acompanham o produto. Para uma explosão aromática imediata, inverta as varetas
+                                    após
+                                    30 minutos. As varetas de algodão da SELÁ dispensam a inversão diária, mantendo a
+                                    dispersão constante por capilaridade.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-6 items-start scroll-reveal">
+                            <span class="font-luxury text-5xl font-light text-black/20 leading-none">03.</span>
+                            <div class="space-y-1">
+                                <h3 class="font-title text-sm font-bold uppercase tracking-wider text-black">Cuidados e
+                                    Durabilidade</h3>
+                                <p class="text-black/60 text-xs leading-relaxed font-light">Evite posicionar o frasco
+                                    diretamente sob luz solar direta ou saídas de ar condicionado para que o líquido não
+                                    evapore de forma acelerada. Mantenha em locais com boa circulação para que a
+                                    identidade
+                                    olfativa seja marcante.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="order-5 md:order-5 py-16 md:py-24 bg-[#EDE7DE] relative z-10 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 scroll-reveal">
+                    <div>
+                        <span class="text-xs tracking-[0.2em] text-black/40 uppercase">Feedback Real</span>
+                        <h2 class="font-title text-3xl font-bold uppercase mt-2">Experiências Reais</h2>
+                    </div>
+                    <div class="h-[1px] w-24 bg-black/10 mt-4 md:mt-0"></div>
+                </div>
+            </div>
+
+
+            <div class="reviews-carousel-wrapper" id="reviews-carousel-wrapper">
+                <div class="reviews-track" id="reviews-track">
+
+                    <div class="review-card">
+                        <div class="flex space-x-1 mb-4 text-black text-xs">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-black/70 text-sm italic mb-6 font-light">"O difusor de Tangerina e Cedro
+                            transformou
+                            a atmosfera da minha sala de atendimento. Meus clientes elogiam o cheiro logo na entrada. O
+                            frasco minimalista ainda compõe perfeitamente a decoração."</p>
+                        <div>
+                            <h4 class="font-semibold text-sm">Mariana R.</h4>
+                            <span class="text-xs text-black/40">Arquiteta · Casa Forte · Recife, PE</span>
                         </div>
                     </div>
 
-                    <div class="flex gap-6 items-start scroll-reveal">
-                        <span class="font-luxury text-5xl font-light text-black/20 leading-none">03.</span>
-                        <div class="space-y-1">
-                            <h3 class="font-title text-sm font-bold uppercase tracking-wider text-black">Cuidados e
-                                Durabilidade</h3>
-                            <p class="text-black/60 text-xs leading-relaxed font-light">Evite posicionar o frasco
-                                diretamente sob luz solar direta ou saídas de ar condicionado para que o líquido não
-                                evapore de forma acelerada. Mantenha em locais com boa circulação para que a identidade
-                                olfativa seja marcante.</p>
+                    <div class="review-card">
+                        <div class="flex space-x-1 mb-4 text-black text-xs">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-black/70 text-sm italic mb-6 font-light">"Fixação fora do comum. Comprei o de Chá
+                            Branco e a casa inteira fica perfumada de forma sutil o dia todo. As varetas de algodão
+                            dispersam sem precisar ficar virando. Atendimento impecável."</p>
+                        <div>
+                            <h4 class="font-semibold text-sm">Carlos E.</h4>
+                            <span class="text-xs text-black/40">Designer de Interiores · Boa Viagem · Recife, PE</span>
                         </div>
                     </div>
+
+                    <div class="review-card">
+                        <div class="flex space-x-1 mb-4 text-black text-xs">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-black/70 text-sm italic mb-6 font-light">"Estava procurando um aromatizador que
+                            não
+                            quebrasse a estética clean do meu apartamento. A SELÁ acertou em cheio. O Âmbar é envolvente
+                            e
+                            acolhedor — já pedi o segundo frasco."</p>
+                        <div>
+                            <h4 class="font-semibold text-sm">Beatriz M.</h4>
+                            <span class="text-xs text-black/40">Empresária · Espinheiro · Recife, PE</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="flex space-x-1 mb-4 text-black text-xs">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-black/70 text-sm italic mb-6 font-light">"As varetas de algodão fazem toda a
+                            diferença. O cheiro se espalha de forma natural e constante. O Alecrim deixa meu escritório
+                            criativo super fresco e me ajuda a manter o foco."</p>
+                        <div>
+                            <h4 class="font-semibold text-sm">Amanda L.</h4>
+                            <span class="text-xs text-black/40">Creative Stylist · Graças · Recife, PE</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="flex space-x-1 mb-4 text-black text-xs">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-black/70 text-sm italic mb-6 font-light">"Qualidade das essências impressionante.
+                            O
+                            aroma é elegante, sutil e nada enjoativo. A compra pelo WhatsApp foi rápida e o produto
+                            chegou
+                            muito bem embalado. Recomendo demais!"</p>
+                        <div>
+                            <h4 class="font-semibold text-sm">Thiago S.</h4>
+                            <span class="text-xs text-black/40">Médico · Jaqueira · Recife, PE</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="flex space-x-1 mb-4 text-black text-xs">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-black/70 text-sm italic mb-6 font-light">"Presenteei minha mãe com o Chá Branco e
+                            ela
+                            adorou. Disse que a casa ficou com um cheiro de spa de luxo. A embalagem veio belíssima e o
+                            atendimento foi gentil e rápido. Amei!"</p>
+                        <div>
+                            <h4 class="font-semibold text-sm">Fernanda A.</h4>
+                            <span class="text-xs text-black/40">Professora · Madalena · Recife, PE</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="flex space-x-1 mb-4 text-black text-xs">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-black/70 text-sm italic mb-6 font-light">"Tenho os quatro e cada um tem sua
+                            personalidade. Uso o Alecrim de manhã no home office, o Âmbar à noite na sala. A SELÁ virou
+                            parte do meu ritual diário. Marca incrível!"</p>
+                        <div>
+                            <h4 class="font-semibold text-sm">Rafael P.</h4>
+                            <span class="text-xs text-black/40">Fotógrafo · Pina · Recife, PE</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="flex space-x-1 mb-4 text-black text-xs">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-black/70 text-sm italic mb-6 font-light">"O Tangerina e Cedro ficou lindo no meu
+                            home
+                            office. O frasco parece peça de galeria. Mas o que mais me surpreendeu foi a durabilidade —
+                            faz
+                            mais de 40 dias e o cheiro ainda está ótimo."</p>
+                        <div>
+                            <h4 class="font-semibold text-sm">Isabela C.</h4>
+                            <span class="text-xs text-black/40">Advogada · Apipucos · Recife, PE</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="depoimentos" class="py-24 relative z-10 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 scroll-reveal">
-                <div>
-                    <span class="text-xs tracking-[0.2em] text-black/40 uppercase">Feedback Real</span>
-                    <h2 class="font-title text-3xl font-bold uppercase mt-2">Experiências Reais</h2>
+        <section id="faq" class="order-6 md:order-6 py-16 md:py-24 bg-[#F5EFE6] border-t border-black/5 relative z-10">
+            <div class="max-w-3xl mx-auto px-6">
+                <div class="text-center mb-16 scroll-reveal">
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-black/40">Dúvidas Comuns</span>
+                    <h2 class="font-title text-3xl font-bold uppercase mt-2">Perguntas Frequentes</h2>
+                    <div class="h-[1px] w-12 bg-black mx-auto my-4"></div>
+                    <p class="text-black/40 text-xs">Tudo que você precisa saber antes de fazer o seu pedido.</p>
                 </div>
-                <div class="h-[1px] w-24 bg-black/10 mt-4 md:mt-0"></div>
+
+                <div class="space-y-3">
+
+                    <details
+                        class="group border border-black/5 bg-[#F8F3ED] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
+                        <summary class="flex items-center justify-between focus:outline-none">
+                            <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Como funciona a compra pelo
+                                site?
+                            </h3>
+                            <span
+                                class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
+                        </summary>
+                        <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">
+                            Você
+                            escolhe as fragrâncias desejadas e as adiciona ao carrinho. Na finalização, preenche seus
+                            dados
+                            de entrega e clica em "Enviar Pedido no WhatsApp". Uma mensagem completa e organizada com
+                            todos
+                            os itens, valores e endereço é gerada automaticamente e enviada direto para o nosso
+                            atendimento.
+                            Confirmamos o pagamento e o envio por lá, de forma rápida e segura.</p>
+                    </details>
+
+                    <details
+                        class="group border border-black/5 bg-[#F8F3ED] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
+                        <summary class="flex items-center justify-between focus:outline-none">
+                            <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Qual a durabilidade e o
+                                diferencial
+                                das varetas de algodão?</h3>
+                            <span
+                                class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
+                        </summary>
+                        <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">
+                            Os
+                            frascos de 250ml perfumam por um período estimado de 30 a 45 dias, dependendo do ambiente e
+                            da
+                            ventilação. Utilizamos paletas de algodão de alta capilaridade, que absorvem e dispersam o
+                            aroma
+                            de forma contínua por capilaridade natural, sem precisar invertê-las todos os dias — ao
+                            contrário das varetas de rattan comuns.</p>
+                    </details>
+
+                    <details
+                        class="group border border-black/5 bg-[#F8F3ED] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
+                        <summary class="flex items-center justify-between focus:outline-none">
+                            <h3 class="text-xs font-bold uppercase tracking-wider pr-4">As essências são importadas?
+                            </h3>
+                            <span
+                                class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
+                        </summary>
+                        <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">
+                            Sim.
+                            Trabalhamos com essências importadas de alta qualidade, selecionadas criteriosamente para
+                            garantir notas aromáticas sofisticadas, complexas e de longa duração. Cada fragrância passa
+                            por
+                            um processo de curadoria para assegurar o nível de luxo e identidade olfativa que
+                            caracteriza a
+                            SELÁ.</p>
+                    </details>
+
+                    <details
+                        class="group border border-black/5 bg-[#F8F3ED] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
+                        <summary class="flex items-center justify-between focus:outline-none">
+                            <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Qual a área de entrega e como
+                                funciona o frete?</h3>
+                            <span
+                                class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
+                        </summary>
+                        <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">
+                            Somos uma marca virtual sediada em Recife, PE. Oferecemos entrega expressa via motoboy para
+                            toda
+                            a Região Metropolitana de Recife. Também enviamos nossos produtos de luxo para todo o Brasil
+                            via
+                            Correios ou transportadoras parceiras, com frete calculado diretamente no fechamento do seu
+                            pedido via WhatsApp.</p>
+                    </details>
+
+                    <details
+                        class="group border border-black/5 bg-[#F8F3ED] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
+                        <summary class="flex items-center justify-between focus:outline-none">
+                            <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Quais são as formas de
+                                pagamento?
+                            </h3>
+                            <span
+                                class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
+                        </summary>
+                        <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">
+                            Aceitamos Pix (aprovação imediata, ideal para agilizar o envio) e cartão de crédito (com
+                            possibilidade de parcelamento). Todas as informações de pagamento são passadas de forma
+                            segura e
+                            rápida durante o atendimento no WhatsApp.</p>
+                    </details>
+
+                    <details
+                        class="group border border-black/5 bg-[#F8F3ED] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
+                        <summary class="flex items-center justify-between focus:outline-none">
+                            <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Posso comprar como presente?
+                            </h3>
+                            <span
+                                class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
+                        </summary>
+                        <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">
+                            Sim!
+                            Os difusores SELÁ chegam em embalagens elegantes, tornando-os uma opção de presente
+                            sofisticado
+                            para qualquer ocasião. Basta informar no WhatsApp que é um presente e podemos orientar sobre
+                            opções de envio para o endereço do presenteado.</p>
+                    </details>
+
+                    <details
+                        class="group border border-black/5 bg-[#F8F3ED] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
+                        <summary class="flex items-center justify-between focus:outline-none">
+                            <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Qual o tamanho ideal para o meu
+                                ambiente?</h3>
+                            <span
+                                class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
+                        </summary>
+                        <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">O
+                            frasco de 250ml é ideal para ambientes de até 30m², como quartos, lavabos, escritórios e
+                            salas
+                            de estar pequenas. Para ambientes maiores ou com muita circulação de ar, recomendamos
+                            colocar
+                            dois frascos em pontos estratégicos para uma cobertura aromática uniforme e marcante.</p>
+                    </details>
+
+                    <details
+                        class="group border border-black/5 bg-[#fcfbf9] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
+                        <summary class="flex items-center justify-between focus:outline-none">
+                            <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Como posso reabastecer o meu
+                                difusor?</h3>
+                            <span
+                                class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
+                        </summary>
+                        <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">
+                            Estamos desenvolvendo refis de todas as fragrâncias de assinatura em embalagens
+                            sustentáveis. Em
+                            breve, você poderá reabastecer seu frasco de vidro SELÁ e continuar aproveitando a
+                            identidade
+                            olfativa do seu ambiente de forma econômica e sustentável.</p>
+                    </details>
+
+                </div>
             </div>
-        </div>
-
-
-        <div class="reviews-carousel-wrapper" id="reviews-carousel-wrapper">
-            <div class="reviews-track" id="reviews-track">
-
-                <div class="review-card">
-                    <div class="flex space-x-1 mb-4 text-black text-xs">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="text-black/70 text-sm italic mb-6 font-light">"O difusor de Tangerina e Cedro transformou
-                        a atmosfera da minha sala de atendimento. Meus clientes elogiam o cheiro logo na entrada. O
-                        frasco minimalista ainda compõe perfeitamente a decoração."</p>
-                    <div>
-                        <h4 class="font-semibold text-sm">Mariana R.</h4>
-                        <span class="text-xs text-black/40">Arquiteta · Casa Forte · Recife, PE</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="flex space-x-1 mb-4 text-black text-xs">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="text-black/70 text-sm italic mb-6 font-light">"Fixação fora do comum. Comprei o de Chá
-                        Branco e a casa inteira fica perfumada de forma sutil o dia todo. As varetas de algodão
-                        dispersam sem precisar ficar virando. Atendimento impecável."</p>
-                    <div>
-                        <h4 class="font-semibold text-sm">Carlos E.</h4>
-                        <span class="text-xs text-black/40">Designer de Interiores · Boa Viagem · Recife, PE</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="flex space-x-1 mb-4 text-black text-xs">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="text-black/70 text-sm italic mb-6 font-light">"Estava procurando um aromatizador que não
-                        quebrasse a estética clean do meu apartamento. A SELÁ acertou em cheio. O Âmbar é envolvente e
-                        acolhedor — já pedi o segundo frasco."</p>
-                    <div>
-                        <h4 class="font-semibold text-sm">Beatriz M.</h4>
-                        <span class="text-xs text-black/40">Empresária · Espinheiro · Recife, PE</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="flex space-x-1 mb-4 text-black text-xs">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="text-black/70 text-sm italic mb-6 font-light">"As varetas de algodão fazem toda a
-                        diferença. O cheiro se espalha de forma natural e constante. O Alecrim deixa meu escritório
-                        criativo super fresco e me ajuda a manter o foco."</p>
-                    <div>
-                        <h4 class="font-semibold text-sm">Amanda L.</h4>
-                        <span class="text-xs text-black/40">Creative Stylist · Graças · Recife, PE</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="flex space-x-1 mb-4 text-black text-xs">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="text-black/70 text-sm italic mb-6 font-light">"Qualidade das essências impressionante. O
-                        aroma é elegante, sutil e nada enjoativo. A compra pelo WhatsApp foi rápida e o produto chegou
-                        muito bem embalado. Recomendo demais!"</p>
-                    <div>
-                        <h4 class="font-semibold text-sm">Thiago S.</h4>
-                        <span class="text-xs text-black/40">Médico · Jaqueira · Recife, PE</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="flex space-x-1 mb-4 text-black text-xs">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="text-black/70 text-sm italic mb-6 font-light">"Presenteei minha mãe com o Chá Branco e ela
-                        adorou. Disse que a casa ficou com um cheiro de spa de luxo. A embalagem veio belíssima e o
-                        atendimento foi gentil e rápido. Amei!"</p>
-                    <div>
-                        <h4 class="font-semibold text-sm">Fernanda A.</h4>
-                        <span class="text-xs text-black/40">Professora · Madalena · Recife, PE</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="flex space-x-1 mb-4 text-black text-xs">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="text-black/70 text-sm italic mb-6 font-light">"Tenho os quatro e cada um tem sua
-                        personalidade. Uso o Alecrim de manhã no home office, o Âmbar à noite na sala. A SELÁ virou
-                        parte do meu ritual diário. Marca incrível!"</p>
-                    <div>
-                        <h4 class="font-semibold text-sm">Rafael P.</h4>
-                        <span class="text-xs text-black/40">Fotógrafo · Pina · Recife, PE</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="flex space-x-1 mb-4 text-black text-xs">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="text-black/70 text-sm italic mb-6 font-light">"O Tangerina e Cedro ficou lindo no meu home
-                        office. O frasco parece peça de galeria. Mas o que mais me surpreendeu foi a durabilidade — faz
-                        mais de 40 dias e o cheiro ainda está ótimo."</p>
-                    <div>
-                        <h4 class="font-semibold text-sm">Isabela C.</h4>
-                        <span class="text-xs text-black/40">Advogada · Apipucos · Recife, PE</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="py-24 bg-white border-t border-black/5 relative z-10">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-16 scroll-reveal">
-                <span class="text-xs font-bold tracking-[0.3em] uppercase text-black/40">Dúvidas Comuns</span>
-                <h2 class="font-title text-3xl font-bold uppercase mt-2">Perguntas Frequentes</h2>
-                <div class="h-[1px] w-12 bg-black mx-auto my-4"></div>
-                <p class="text-black/40 text-xs">Tudo que você precisa saber antes de fazer o seu pedido.</p>
-            </div>
-
-            <div class="space-y-3">
-
-                <details
-                    class="group border border-black/5 bg-[#fcfbf9] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
-                    <summary class="flex items-center justify-between focus:outline-none">
-                        <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Como funciona a compra pelo site?
-                        </h3>
-                        <span
-                            class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">Você
-                        escolhe as fragrâncias desejadas e as adiciona ao carrinho. Na finalização, preenche seus dados
-                        de entrega e clica em "Enviar Pedido no WhatsApp". Uma mensagem completa e organizada com todos
-                        os itens, valores e endereço é gerada automaticamente e enviada direto para o nosso atendimento.
-                        Confirmamos o pagamento e o envio por lá, de forma rápida e segura.</p>
-                </details>
-
-                <details
-                    class="group border border-black/5 bg-[#fcfbf9] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
-                    <summary class="flex items-center justify-between focus:outline-none">
-                        <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Qual a durabilidade e o diferencial
-                            das varetas de algodão?</h3>
-                        <span
-                            class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">Os
-                        frascos de 250ml perfumam por um período estimado de 30 a 45 dias, dependendo do ambiente e da
-                        ventilação. Utilizamos paletas de algodão de alta capilaridade, que absorvem e dispersam o aroma
-                        de forma contínua por capilaridade natural, sem precisar invertê-las todos os dias — ao
-                        contrário das varetas de rattan comuns.</p>
-                </details>
-
-                <details
-                    class="group border border-black/5 bg-[#fcfbf9] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
-                    <summary class="flex items-center justify-between focus:outline-none">
-                        <h3 class="text-xs font-bold uppercase tracking-wider pr-4">As essências são importadas?</h3>
-                        <span
-                            class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">Sim.
-                        Trabalhamos com essências importadas de alta qualidade, selecionadas criteriosamente para
-                        garantir notas aromáticas sofisticadas, complexas e de longa duração. Cada fragrância passa por
-                        um processo de curadoria para assegurar o nível de luxo e identidade olfativa que caracteriza a
-                        SELÁ.</p>
-                </details>
-
-                <details
-                    class="group border border-black/5 bg-[#fcfbf9] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
-                    <summary class="flex items-center justify-between focus:outline-none">
-                        <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Qual a área de entrega e como
-                            funciona o frete?</h3>
-                        <span
-                            class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">
-                        Somos uma marca virtual sediada em Recife, PE. Oferecemos entrega expressa via motoboy para toda
-                        a Região Metropolitana de Recife. Também enviamos nossos produtos de luxo para todo o Brasil via
-                        Correios ou transportadoras parceiras, com frete calculado diretamente no fechamento do seu
-                        pedido via WhatsApp.</p>
-                </details>
-
-                <details
-                    class="group border border-black/5 bg-[#fcfbf9] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
-                    <summary class="flex items-center justify-between focus:outline-none">
-                        <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Quais são as formas de pagamento?
-                        </h3>
-                        <span
-                            class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">
-                        Aceitamos Pix (aprovação imediata, ideal para agilizar o envio) e cartão de crédito (com
-                        possibilidade de parcelamento). Todas as informações de pagamento são passadas de forma segura e
-                        rápida durante o atendimento no WhatsApp.</p>
-                </details>
-
-                <details
-                    class="group border border-black/5 bg-[#fcfbf9] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
-                    <summary class="flex items-center justify-between focus:outline-none">
-                        <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Posso comprar como presente?</h3>
-                        <span
-                            class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">Sim!
-                        Os difusores SELÁ chegam em embalagens elegantes, tornando-os uma opção de presente sofisticado
-                        para qualquer ocasião. Basta informar no WhatsApp que é um presente e podemos orientar sobre
-                        opções de envio para o endereço do presenteado.</p>
-                </details>
-
-                <details
-                    class="group border border-black/5 bg-[#fcfbf9] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
-                    <summary class="flex items-center justify-between focus:outline-none">
-                        <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Qual o tamanho ideal para o meu
-                            ambiente?</h3>
-                        <span
-                            class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">O
-                        frasco de 250ml é ideal para ambientes de até 30m², como quartos, lavabos, escritórios e salas
-                        de estar pequenas. Para ambientes maiores ou com muita circulação de ar, recomendamos colocar
-                        dois frascos em pontos estratégicos para uma cobertura aromática uniforme e marcante.</p>
-                </details>
-
-                <details
-                    class="group border border-black/5 bg-[#fcfbf9] p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer scroll-reveal">
-                    <summary class="flex items-center justify-between focus:outline-none">
-                        <h3 class="text-xs font-bold uppercase tracking-wider pr-4">Como posso reabastecer o meu
-                            difusor?</h3>
-                        <span
-                            class="text-[10px] flex-shrink-0 transition-transform duration-300 group-open:-rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-4 text-xs text-black/60 leading-relaxed pl-3 border-l border-black/20 font-light">
-                        Estamos desenvolvendo refis de todas as fragrâncias de assinatura em embalagens sustentáveis. Em
-                        breve, você poderá reabastecer seu frasco de vidro SELÁ e continuar aproveitando a identidade
-                        olfativa do seu ambiente de forma econômica e sustentável.</p>
-                </details>
-
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
 
     <footer class="border-t border-black/5 bg-black text-white py-12 text-center text-xs tracking-widest">
         <div class="max-w-7xl mx-auto px-6 space-y-4">
@@ -879,7 +962,8 @@
             <div class="flex-1 overflow-y-auto p-6 space-y-4">
                 <button id="back-to-items"
                     class="flex items-center text-xs uppercase tracking-widest text-black/60 hover:text-black transition-colors mb-2">
-                    <svg class="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                     </svg> Voltar ao carrinho
                 </button>

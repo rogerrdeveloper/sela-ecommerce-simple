@@ -56,12 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
         '-=1'
     );
 
-    tl.fromTo('#hero-product',
-        { opacity: 0, y: 50, scale: 0.95 },
-        { opacity: 1, y: 0, scale: 1, duration: 1.6, ease: "power3.out" },
-        '-=1.4'
-    );
-
     gsap.to('#bg-blur-1', {
         x: 60, y: -50, scale: 1.12,
         duration: 18,
@@ -90,20 +84,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const srConfig = {
         origin: 'bottom',
-        distance: '32px',
-        duration: 900,
+        distance: '24px',
+        duration: 1200,
         delay: 0,
         opacity: 0,
         scale: 1,
-        easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
-        reset: true,
+        easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+        reset: false,
         mobile: true,
         desktop: true,
     };
 
     ScrollReveal().reveal('.scroll-reveal', {
         ...srConfig,
-        interval: 80,
+        interval: 50,
     });
 
     let cart = [];
@@ -307,6 +301,26 @@ Aguardo a confirmação. Obrigado!`;
 
 
     renderCart();
+
+    // Mobile Carousel Navigation
+    const carousel = document.getElementById('products-carousel');
+    const prevBtn = document.getElementById('prev-prod');
+    const nextBtn = document.getElementById('next-prod');
+
+    if (carousel && prevBtn && nextBtn) {
+        const getScrollAmount = () => {
+            // Each card is w-full of the carousel container on mobile
+            return carousel.offsetWidth;
+        };
+
+        prevBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        });
+    }
 
     const reviewsTrack = document.getElementById('reviews-track');
     if (reviewsTrack) {
