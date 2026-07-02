@@ -32,6 +32,8 @@ html {
     overflow-x: hidden !important;
     max-width: 100% !important;
     width: 100%;
+    /* Bloqueia zoom por toque duplo, sem travar o scroll */
+    touch-action: manipulation;
 }
 
 body {
@@ -39,6 +41,13 @@ body {
     max-width: 100% !important;
     width: 100%;
     position: relative;
+}
+
+/* Esconde setas do carousel no mobile (grid vertical agora) */
+@media (max-width: 767px) {
+    #prev-prod, #next-prod {
+        display: none !important;
+    }
 }
 
 html.lenis,

@@ -1,8 +1,11 @@
+const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+
 const lenis = new Lenis({
-    duration: 1.4,
+    duration: isMobile ? 0.8 : 1.4,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     smooth: true,
-    smoothTouch: false,
+    smoothTouch: true,
+    touchMultiplier: 1.5,
 });
 
 gsap.ticker.add((time) => {
@@ -14,23 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger);
 
     const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-
-    tl.fromTo(['#bg-blur-1', '#bg-blur-2'],
-        { opacity: 0, scale: 0.8 },
-        { opacity: 1, scale: 1, duration: 2.5, stagger: 0.3 }
-    );
-
-    tl.fromTo('#main-header',
-        { opacity: 0, y: -24 },
-        { opacity: 1, y: 0, duration: 1.2 },
-        '-=2'
-    );
-
-    tl.fromTo(['#header-logo', '#header-nav > a', '#header-buy'],
-        { opacity: 0, y: -10 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.08 },
-        '-=1.4'
-    );
 
 
     tl.fromTo('#hero-desc',
